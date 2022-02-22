@@ -498,6 +498,23 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
+                       case 'puppet':
+                       tex = Paths.getSparrowAtlas('characters/puppet_assets','shared');
+                       frames = tex;
+                       animation.addByPrefix('idle', 'monster idle', 24);
+                       animation.addByPrefix('singUP', 'monster up note', 24);
+		       animation.addByPrefix('singRIGHT', 'Monster Right note', 24);
+	               animation.addByPrefix('singDOWN', 'monster down', 24);
+		       animation.addByPrefix('singLEFT', 'Monster left note', 24);
+                       
+  
+                       addOffset('idle', -10, -60);
+	               addOffset("singUP", 4, -40);
+		       addOffset("singRIGHT", -79, -82);
+		       addOffset("singLEFT", 30, -82);
+	               addOffset("singDOWN", -10, -100);
+
+                       playAnim('idle');
 		}
 
 		dance();
